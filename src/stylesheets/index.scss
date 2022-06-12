@@ -1,0 +1,7 @@
+@use "utilities/global" as *;
+
+@include setup;
+
+body {
+  font-family: $font;
+}
