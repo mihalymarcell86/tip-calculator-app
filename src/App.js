@@ -1,8 +1,20 @@
+import Header from "./components/Header";
+import NumberField from "./components/NumberField";
+import TipInput from "./components/TipInput";
+import Display from "./components/Display";
+
 export default function App() {
   return (
     <>
-      Bill Select Tip % 5% 10% 15% 25% 50% Custom Number of People Tip Amount /
-      person Total / person Reset
+      <Header />
+      <main className="main">
+        <form className="input-form">
+          <NumberField name="Bill" />
+          <TipInput />
+          <NumberField name="Number of People" />
+        </form>
+        <Display />
+      </main>
     </>
   );
 }

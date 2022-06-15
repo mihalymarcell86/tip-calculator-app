@@ -2,7 +2,7 @@
 
 $REM: 24;
 $font: "Space Mono", monospace;
-$breakpoint: undefined;
+$breakpoint: 1000px;
 
 $colors: (
   strong-cyan: hsl(172, 67%, 45%),
@@ -10,6 +10,6 @@ $colors: (
   dark-grayish-cyan: hsl(186, 14%, 43%),
   grayish-cyan: hsl(184, 14%, 56%),
   light-grayish-cyan: hsl(185, 41%, 84%),
-  very-light-grayish-cyan: hsl(189, 41%, 97%),
+  very-light-grayish-cyan: hsl(180, 37%, 97%),
   white: hsl(0, 0%, 100%),
 );

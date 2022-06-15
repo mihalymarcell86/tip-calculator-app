@@ -4,4 +4,225 @@
 
 body {
   font-family: $font;
+  background-color: color(light-grayish-cyan);
+  padding-top: 50px;
+}
+
+.header__logo {
+  display: block;
+  margin: 0 auto 40px;
+  @media (min-width: $breakpoint) {
+    margin: 163px auto 88px;
+  }
+}
+
+.main {
+  background-color: color(white);
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px;
+  padding: 32px 24px;
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 451px) {
+    border-radius: 25px;
+  }
+  @media (min-width: $breakpoint) {
+    flex-direction: row;
+    padding: 32px 32px;
+    max-width: 920px;
+  }
+}
+
+.input-form {
+  padding: 0px 8px;
+  @media (min-width: $breakpoint) {
+    padding: 13px 48px 16px 13px;
+    max-width: 440px;
+  }
+}
+
+.form__legend {
+  margin-bottom: 6px;
+  @include setFont(rem(16px), 24px, 700);
+  color: color(dark-grayish-cyan);
+}
+
+.legend--tip {
+  margin-bottom: 16px;
+}
+
+fieldset {
+  border: 0;
+  position: relative;
+}
+
+.tip__inputs {
+  display: grid;
+  grid-template: repeat(3, 48px) / repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+  @media (min-width: $breakpoint) {
+    grid-template: repeat(2, 48px) / repeat(3, 1fr);
+  }
+}
+
+input {
+  appearance: none;
+  display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form__number-input {
+  appearance: textfield;
+  border-radius: 5px;
+  @include setFont(rem(24px), 36px, 700);
+  font-family: $font;
+  width: 100%;
+  padding-inline: 18px;
+  background-color: color(very-light-grayish-cyan);
+  color: color(very-dark-cyan);
+  border: 0;
+  text-align: right;
+  height: rem(48px);
+  position: relative;
+  &::placeholder {
+    color: color(very-dark-cyan);
+  }
+  margin-bottom: 32px;
+  &:focus {
+    outline: 2px solid color(strong-cyan);
+  }
+}
+
+.input--people {
+  @media (min-width: $breakpoint) {
+    margin-bottom: 0;
+  }
+}
+
+.input--custom {
+  @media (min-width: $breakpoint) {
+    padding-inline: 14px;
+  }
+  &::placeholder {
+    color: hsla(180, 18%, 40%, 1);
+  }
+}
+
+.icon-dollar {
+  ::before {
+    content: "";
+    width: 11px;
+    height: 17px;
+    background-image: url("../images/icon-dollar.svg");
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    z-index: 1;
+  }
+}
+
+.icon-person {
+  ::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-image: url("../images/icon-person.svg");
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    z-index: 1;
+  }
+}
+
+.tip__label {
+  @include setFont(rem(24px), 36px, 700);
+  border-radius: 5px;
+  background-color: color(very-dark-cyan);
+  color: color(white);
+  display: block;
+  padding-block: 6px;
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    background-color: hsla(172, 61%, 77%, 1);
+    color: color(very-dark-cyan);
+  }
+}
+
+input[type="radio"]:checked + .tip__label {
+  background-color: color(strong-cyan);
+  color: color(very-dark-cyan);
+}
+
+.display {
+  border-radius: 15px;
+  background-color: color(very-dark-cyan);
+  padding: 37px 24px 24px;
+  font-size: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $breakpoint) {
+    padding: 40px;
+  }
+}
+
+.display__result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  @media (min-width: $breakpoint) {
+    margin-bottom: 25px;
+  }
+}
+
+.display__nums {
+  @include setFont(rem(32px), 44, 700);
+  letter-spacing: -0.666667px;
+  color: color(strong-cyan);
+  @media (min-width: $breakpoint) {
+    @include setFont(rem(48px), 71);
+    letter-spacing: -1px;
+  }
+}
+
+.total {
+  color: color(white);
+  @include setFont(rem(16px), 24px, 700);
+}
+
+.pp {
+  color: color(grayish-cyan);
+  @include setFont(rem(13px), 19px, 700);
+  display: block;
+}
+
+.display__button {
+  border: 0;
+  border-radius: 5px;
+  background-color: color(strong-cyan);
+  color: color(very-dark-cyan);
+  width: 100%;
+  height: rem(48px);
+  @include setFont(rem(20px), 30px, 700);
+  font-family: $font;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 12px;
+  @media (min-width: $breakpoint) {
+    margin-top: auto;
+  }
+  &:hover {
+    background-color: hsla(172, 61%, 77%, 1);
+  }
 }
