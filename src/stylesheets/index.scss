@@ -47,6 +47,8 @@ body {
   margin-bottom: 6px;
   @include setFont(rem(16px), 24px, 700);
   color: color(dark-grayish-cyan);
+  display: flex;
+  width: 100%;
 }
 
 .legend--tip {
@@ -69,7 +71,6 @@ fieldset {
 }
 
 input {
-  appearance: none;
   display: block;
 }
 
@@ -116,6 +117,19 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.input--warning {
+  outline: 2px solid hsla(13, 70%, 60%, 1);
+  &:focus {
+    outline: 2px solid hsla(13, 70%, 60%, 1);
+  }
+}
+
+.warning {
+  @include setFont(rem(16px), 24, 700);
+  color: hsla(13, 70%, 60%, 1);
+  margin-left: auto;
+}
+
 .icon-dollar {
   ::before {
     content: "";
@@ -142,7 +156,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.tip__label {
+.tip__option {
   @include setFont(rem(24px), 36px, 700);
   border-radius: 5px;
   background-color: color(very-dark-cyan);
@@ -152,13 +166,17 @@ input::-webkit-inner-spin-button {
   width: 100%;
   cursor: pointer;
   text-align: center;
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: hsla(172, 61%, 77%, 1);
     color: color(very-dark-cyan);
   }
+  &:focus {
+    outline: 2px solid color(strong-cyan);
+  }
 }
 
-input[type="radio"]:checked + .tip__label {
+.option--selected {
   background-color: color(strong-cyan);
   color: color(very-dark-cyan);
 }
@@ -224,5 +242,9 @@ input[type="radio"]:checked + .tip__label {
   }
   &:hover {
     background-color: hsla(172, 61%, 77%, 1);
+  }
+  &:disabled {
+    background-color: hsla(183, 78%, 24%, 1);
+    color: color(very-dark-cyan);
   }
 }

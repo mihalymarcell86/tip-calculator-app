@@ -10,12 +10,18 @@ function Result(props) {
   );
 }
 
-export default function Display() {
+export default function Display(props) {
   return (
     <div className="display">
-      <Result name="Tip Amount" amount="$4.27" />
-      <Result name="Total" amount="$32.79" />
-      <button className="display__button">Reset</button>
+      <Result name="Tip Amount" amount={`$${props.tip}`} />
+      <Result name="Total" amount={`$${props.total}`} />
+      <button
+        className="display__button"
+        disabled={props.resetDisabled}
+        onClick={props.onReset}
+      >
+        Reset
+      </button>
     </div>
   );
 }
