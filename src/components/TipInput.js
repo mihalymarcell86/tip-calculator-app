@@ -35,8 +35,8 @@ export default function TipInput(props) {
   }
 
   return (
-    <fieldset role="radiogroup">
-      <legend className="form__legend legend--tip">Select Tip %</legend>
+    <div role="radiogroup">
+      <p className="form__legend legend--tip">Select Tip %</p>
       <div className="tip__inputs">
         {tipOptions}
         <input
@@ -51,6 +51,6 @@ export default function TipInput(props) {
           onChange={changeCustom}
         />
       </div>
-    </fieldset>
+    </div>
   );
 }

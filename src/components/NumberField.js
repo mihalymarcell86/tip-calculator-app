@@ -7,17 +7,19 @@ export default function NumberInput(props) {
     }
   }
   return (
-    <fieldset
-      className={`${props.name === "Bill" ? "icon-dollar" : "icon-person"}`}
+    <div
+      className={`form__input-field ${
+        props.name === "Bill" ? "icon-dollar" : "icon-person"
+      }`}
     >
-      <legend className="form__legend">
+      <p className="form__legend">
         <span>{props.name}</span>
         {props.name === "Number of People" &&
           props.value &&
           Number(props.value) === 0 && (
             <span className="warning">Can't be zero</span>
           )}
-      </legend>
+      </p>
       <input
         type="number"
         className={inputClassName}
@@ -25,6 +27,6 @@ export default function NumberInput(props) {
         value={props.value}
         onChange={props.onChange}
       ></input>
-    </fieldset>
+    </div>
   );
 }
