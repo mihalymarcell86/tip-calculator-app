@@ -38,7 +38,7 @@ Mobile
 ### Links
 
 - Solution URL: [https://github.com/mihalymarcell86/tip-calculator-app](https://github.com/mihalymarcell86/tip-calculator-app)
-- Live Site URL: [https://tip-calculator-iwbcy3nao-mihalymarcell86.vercel.app/](https://tip-calculator-iwbcy3nao-mihalymarcell86.vercel.app/)
+- Live Site URL: [https://mihalymarcell86-tip-calculator-app.vercel.app/](https://mihalymarcell86-tip-calculator-app.vercel.app/)
 
 ## My process
 
