@@ -190,6 +190,7 @@ input::-webkit-inner-spin-button {
   flex-direction: column;
   @media (min-width: $breakpoint) {
     padding: 40px;
+    height: 417px;
   }
 }
 
@@ -246,4 +247,10 @@ input::-webkit-inner-spin-button {
     background-color: hsla(183, 78%, 24%, 1);
     color: color(very-dark-cyan);
   }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1em;
 }

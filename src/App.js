@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import NumberField from "./components/NumberField";
 import TipInput from "./components/TipInput";
 import Display from "./components/Display";
+import Attribution from "./components/Attribution";
 
 export default function App() {
   const [bill, setBill] = useState("");
@@ -65,6 +66,9 @@ export default function App() {
           onReset={reset}
         />
       </main>
+      <footer>
+        <Attribution />
+      </footer>
     </>
   );
 }
